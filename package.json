@@ -1,12 +1,14 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
+    "esm": "^3.2.25",
     "express": "^4.18.1",
     "morgan": "^1.10.0"
   },
   "name": "medicine_backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.17.10",
@@ -18,7 +20,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node --config-file ./babel.config.json src/server.js"
+    "dev": "nodemon src/server.mjs",
+    "start": "node src/server.mjs"
   },
   "author": "",
   "license": "ISC",
